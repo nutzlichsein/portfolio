@@ -1,0 +1,20 @@
+{{ define "main" }}
+<section class="photos-page">
+  <!-- Thumbnail grid layout -->
+  <div class="thumb-container">
+    <div class="photo-thumbnail-grid">
+      {{ range .Site.Data.photos }}
+        <a href="{{ .url }}" class="photo-link">
+          <div class="photo-thumbnail" style="background-image: url('{{ .thumbnail }}')">
+            <img src="{{ .thumbnail }}" alt="{{ .title }}">
+            <!-- Overlay title, initially hidden -->
+            <div class="photo-title-overlay">
+              <p class="photo-title">{{ .title }}</p>
+            </div>
+          </div>
+        </a>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}

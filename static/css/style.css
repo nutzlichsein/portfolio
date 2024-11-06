@@ -1,0 +1,449 @@
+/* style.css */
+
+/* Basic reset */
+* {
+    margin: 10;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  /* HANYA UNTUK HALAMAN UTAMA SUPAYA TIDAK ADA SCROLL */
+ /* Target the main page */
+/* Target the image */
+
+  /* Header styling */
+  .header-container {
+    color: #000000;
+    height: 73px;
+}
+  .site-header {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    position: absolute;
+    width: 90%;
+    height: 4.5rem;
+    top: 0;
+    z-index: 2;
+    background: rgb(0, 0, 0);
+    margin-left:5%;
+  }
+  
+  /* Larger logo and spacing adjustments */
+  .site-logo img {
+    height: 3rem; /* Adjust height as needed */
+    width: auto;
+    object-fit: contain;
+    color: #ddd;
+    padding-top: 5px;
+    padding-left: 10px;
+  }
+
+  .site-logo h1 {
+    font-family: 'Montserrat', sans-serif; /* Replace with the name of your font */
+    font-weight: 700; /* Replace with the desired font weight */
+    font-size: 2rem; /* Adjust the font size as needed */
+    color: #cccccc;
+    margin: 0;
+    line-height: 0.8; /* Adjust the line height to control vertical spacing */
+  }
+  
+  .site-logo h1 br {
+    margin: 0;
+    line-height: 0.2; /* Adjust the line height to control vertical spacing */
+  }
+
+  .site-logo h1:hover {
+    color: #ffea00;
+  }
+  
+  /* Navigation menu */
+  .site-nav {
+    margin-left: auto; /* Pushes the menu to the right */
+
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .site-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .site-nav li {
+    margin-right: 20px; /* adjust the spacing as needed */
+  }
+  
+  /* Style links, including icons */
+  .site-nav a {
+    text-decoration: none;
+    color: #cccccc;
+    font-weight: lighter;
+    font-size: 1.1rem;
+  }
+  
+  .site-nav a:hover {
+    color: #ffea00;
+  }
+
+  /* Apply the custom font */
+body {
+  font-family: 'Montserrat', sans-serif; /* Replace 'Roboto' with your chosen font */
+  display: flex;
+  flex-direction: column;
+  min-height: 90vh;
+  margin: 0;
+  background-color: #000000;
+  /* padding-top: 70px; */
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 90vh; /* Allows the main content to grow and push the footer down */
+}
+  
+  /* Footer styling */
+.site-footer {
+    background-color: #000000;
+    text-align: center;
+    padding: 0.2rem;
+    font-size: 0.9rem;
+    border-top: 0px solid #ddd;
+    width: 100%;
+  }
+  
+  .site-footer p {
+    margin: 0.5rem 0;
+    color: #aaaaaa;
+  }
+  
+  .site-footer a {
+    color: #aaaaaa;
+    text-decoration: none;
+  }
+  
+  .site-footer a:hover {
+    color: #ffffff;
+    text-decoration: none;
+  }
+
+  /* SLIDESHOW LANDING PAGE */
+.slideshow-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.slideshow {
+  display: flex;
+  height: 90vh;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0; /* Hidden by default */
+  transition: opacity 1s ease; /* Smooth fade transition */
+}
+
+.slide.active {
+  opacity: 1; /* Only the active slide is visible */
+}
+
+.overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  z-index: 1;
+}
+
+.overlay h1 {
+  font-size: 4rem;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif; /* Change the font family */
+  color: #ffea00; /* Change the text color */
+}
+
+.overlay p {
+  font-size: 1.3rem;
+  margin: -1rem 0 0 0;
+  font-family: 'Montserrat', sans-serif; /* Change the font family */
+  font-weight: 600;
+  color: #dbdbdb; /* Change the text color */
+}
+
+
+
+/* INI UNTUK HALAMAN REELS */
+/* style for the embedded video player PLYR.io in reels page */
+/* Ensure the video player and thumbnails are properly stacked */
+/* Adjusted video player container */
+.video-player-container {
+  width: 90vw;
+  margin: 0 auto 10px; /* Space below the player */
+  position: relative;
+  background-color: #000000; /* Optional: background color */
+  height: 56.25vh; /* 16:9 aspect ratio based on viewport width */
+  border: #ffea00 0px solid;
+  border-radius: 0px; /* Rounded corners for the container */
+  padding: 0; /* Remove padding so the iframe fills the container fully */
+  border-overflow: hidden; /* Ensures iframe is clipped to border radius */
+  box-sizing: border-box;
+}
+
+.video-player-container iframe {
+  width: 99.8%;
+  height: 99.8%;
+  border: none;
+  position: center; /* Stays fully within the container */
+  top: 0;
+  left: 0;
+  border-radius: 0px;
+}
+
+
+/* Thumbnail container directly below video player */
+.thumb-container {
+  width: 100%; /* Aligns with the player width */
+  margin: 0 auto; /* Center the thumbnails under the player */
+  display: flex;
+  justify-content: center;
+}
+
+.thumbnail-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns for thumbnails */
+  gap: 10px; /* Space between thumbnails */
+  width: 100%; /* Fit within the thumb-container width */
+}
+
+.video-thumbnail {
+  width: 100%;
+  cursor: pointer;
+  aspect-ratio: 16/9;
+  background-size: cover;
+  background-position: center;
+  border-radius: 5px; /* Optional: rounded corners */
+  transition: opacity 0.3s;
+  opacity: 0.7;
+  overflow: hidden;
+}
+
+.video-thumbnail:hover {
+  opacity: 1;
+}
+
+
+/* HALAMAN ABOUT */
+.about-page {
+  padding: 100px;
+  display: flex;
+  justify-content: center;
+}
+
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.about-photo {
+  flex-basis: 30%;
+  margin: 20px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.about-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-text {
+  flex-basis: 60%;
+  margin: 20px;
+  color: #cecece;
+  padding-bottom: 30px;
+}
+
+/* BUTTON di HALAMAN ABOUT */
+.contact-button {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  margin-top: 20px !important;
+}
+
+.contact-button:hover {
+  background-color: #ffea00;
+  color: #000000;
+}
+
+.spacer {
+  height: 20px;
+}
+
+/* PHOTO MAIN PAGE - LIST ESSAY - STORIES */
+.photos-page {
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+  background-color: #000000;
+}
+
+.thumb-container {
+  width: 90%;
+  height: auto;
+  overflow-y: clip;
+  margin-top: 0;
+}
+
+.photo-thumbnail-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5px;
+  width: 100%;
+  margin: 0;
+  height: auto; /* add this to make the grid take up the full height of the wrapper */
+  z-index: 1;
+}
+
+/* Thumbnail link styling */
+.photo-link {
+  position: relative;
+  display: block;
+  text-decoration: none;
+  color: #ffea00; /* Adjust as needed */
+  overflow: hidden;
+}
+
+.photo-thumbnail {
+  width: 99%; /* Set the width to 100% of the viewport width */
+  height: calc(99% - 5px);
+  cursor: pointer;
+  object-fit: contain;
+  display: block;
+  aspect-ratio: 3/2 ;
+  background-color: #000;
+  opacity: 0.7;
+  transition: opacity 0.3s;
+  border: #aaaaaa 0px solid;
+  padding-bottom: 0px;
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+.photo-thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0px;
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Title overlay, initially hidden */
+.photo-title-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* Semi-transparent overlay */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Title text styling */
+.photo-title {
+  font-family: 'Literata', serif;
+  font-size: 1.6rem;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px;
+  color: #ffea00;
+}
+
+/* Hover effect to reveal the overlay */
+.photo-thumbnail:hover .photo-title-overlay {
+  opacity: 1; /* Makes the overlay visible on hover */
+  transform: scale(1.1);
+}
+
+/* Optional: Zoom effect on thumbnail when hovered */
+.photo-thumbnail:hover img {
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+
+
+/* SINGLE PHOTO ESSAY STYLE */
+.photo-essay-page {
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.photo-essay-container {
+  padding: 20px;
+}
+
+.photo-essay-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.essay-text-column {
+  width: 33%;
+  padding: 10px;
+  color: #cecece;
+}
+
+.gallery-column {
+  width: 67%;
+  padding: 10px;
+}
+
+.gallery-container {
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.gallery-row {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+}
+
+.gallery-item {
+  margin-right: 10px;
+  width: auto; /* adjust the width to your liking */
+  height: 70vh; /* adjust the height to your liking */
+}
+
+.gallery-item img {
+  width: auto;
+  height: 100%;
+  object-fit: fill;
+}

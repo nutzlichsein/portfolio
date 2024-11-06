@@ -1,0 +1,32 @@
+<header class="site-header">
+    <!-- Conditional Logo, kalau mau jadi image, pake true -->
+    {{ if eq .Site.Params.useTextLogo true }}
+  <div class="site-logo">
+    <h1 class="site-title">SURYO<br>WIBOWO</h1>
+  </div>
+{{ else }}
+  <a class="site-logo" href="{{ .Site.BaseURL }}">
+    <img src="{{ .Site.Params.logo | default "images/logo.png" }}" 
+         height="{{ .Site.Params.logoHeight }}" 
+         width="{{ .Site.Params.logoWidth }}" 
+         alt="{{ .Site.Title }}">
+  </a>
+{{ end }}
+  
+    <!-- Navigation Menu -->
+    <!-- Navigation Menu -->
+<nav class="site-nav">
+  <ul>
+    {{ range .Site.Menus.main }}
+      <li>
+        <a href="{{ .URL }}" target="{{ if (or (eq .Name "Instagram") (eq .Name "YouTube")) }}_blank{{ else }}_self{{ end }}" rel="noopener">
+          {{ if eq .Name "Instagram" }}<i class="fab fa-instagram"></i>{{ end }}
+          {{ if eq .Name "YouTube" }}<i class="fab fa-youtube"></i>{{ end }}
+          {{ if not (or (eq .Name "Instagram") (eq .Name "YouTube")) }}{{ .Name }}{{ end }}
+        </a>
+      </li>
+    {{ end }}
+  </ul>
+</nav>
+  </header>
+  

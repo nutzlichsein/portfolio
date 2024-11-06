@@ -1,0 +1,44 @@
+{{ define "main" }}
+<section class="reels-page">
+  <!-- Main video player container, directly below the header -->
+  <div class="video-player-container">
+    <div class="video-player-container" id="main-video">
+      <iframe
+        src="{{ (index .Site.Data.videos 0).src }}?autoplay=0&modestbranding=1&rel=0"
+        allowfullscreen
+        allowtransparency
+        allow="autoplay"
+        frameborder="0"
+      ></iframe>
+    </div>
+    
+
+  <!-- Thumbnail grid layout -->
+  <div class="thumb-container">
+    <div class="thumbnail-grid">
+      {{ range .Site.Data.videos }}
+       <div class="video-thumbnail" data-video="{{ .src }}" style="background-image: url('{{ .thumbnail }}')">
+        <!-- Add any other HTML elements you need here -->
+      </div>
+    {{ end }}
+    </div>
+  </div>
+
+
+
+  <script>
+    const thumbnails = document.querySelectorAll('.video-thumbnail');
+    const videoPlayer = document.getElementById('main-video').querySelector('iframe');
+    console.log('Video player:', videoPlayer);
+
+    thumbnails.forEach((thumbnail) => {
+      thumbnail.addEventListener('click', () => {
+        console.log('Thumbnail clicked!');
+        const videoSrc = thumbnail.getAttribute('data-video');
+        console.log('Video source:', videoSrc);
+        videoPlayer.src = `${videoSrc}?autoplay=1&modestbranding=1&rel=0`;
+      });
+    });
+  </script>
+</section>
+{{ end }}

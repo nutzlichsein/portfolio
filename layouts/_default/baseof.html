@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="{{ .Params.keywords | default .Site.Params.keywords }}">
+  <title>{{ .Title }} | {{ .Site.Title }}</title>
+  <link rel="stylesheet" href="/css/style.css"> <!-- Link to the CSS file -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Literata:wght@400;700&family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.plyr.io/3.6.8/plyr.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/css/lightgallery-bundle.min.css">
+  <link rel="canonical" href="{{ .Permalink }}">
+  <script src="https://cdn.plyr.io/3.6.8/plyr.polyfilled.js"></script>
+
+
+</head>
+<header> 
+  <div class="header-container">
+    <!-- Header -->
+    {{ partial "header.html" . }}
+  </div>
+</header> 
+<body>
+<!-- Main Content Wrapper -->
+  <div class="main-content">
+    {{ block "main" . }}{{ end }}
+  </div>
+
+  <!-- Link to slideshow.js -->
+  <script src="/js/slideshow.js"></script>
+  <!-- Link to reels.js -->
+  <script src="/js/reels.js"></script>
+
+  <!-- Link to lightgallery.js -->
+  <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/lightgallery.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/plugins/thumbnail/lg-thumbnail.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/plugins/zoom/lg-zoom.umd.min.js"></script>
+  <script src="/js/lightgallery-init.js"></script>
+
+  <!-- Link to disable right click-->
+  <script src="/js/disable-right-click.js"></script>
+
+  </body>
+<footer>
+        <!-- Footer -->
+        {{ partial "footer.html" . }}
+</footer>
+</html>

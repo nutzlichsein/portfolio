@@ -1,0 +1,23 @@
+{{ define "main" }}
+<section class="photo-essay-page">
+  <div class="photo-essay-container">
+    <div class="photo-essay-row">
+      <div class="col-md-6 essay-text-column">
+        {{ .Content }}
+      </div>
+      <div class="col-md-6 gallery-column">
+        <!-- Initialize LightGallery on this container -->
+        <div class="gallery-container" id="lightgallery">
+          <div class="gallery-row">
+            {{ range .Params.images }}
+              <a href="{{ .image }}" class="gallery-item" data-lg-size="1600-900" data-caption="{{ .caption }}">
+                <img src="{{ .image }}" alt="{{ .caption }}">
+              </a>
+            {{ end }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}

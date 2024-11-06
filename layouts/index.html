@@ -1,0 +1,20 @@
+{{ define "main" }}
+<section class="landing-page">
+  <div class="slideshow-container">
+    <!-- Title and subtitle overlay -->
+    <div class="overlay">
+      <h1>{{ .Site.Title }}</h1>
+      <p>{{ .Site.Params.subtitle }}</p>
+    </div>
+    
+    <!-- Slideshow images -->
+    <div class="slideshow">
+      <div class="slide" style="background-image: url('/images/photos/kendeng/SW20161223_0049.jpg');"></div>
+      <div class="slide" style="background-image: url('/images/photos/afp-tattoo/SW20151205_039.jpg');"></div>
+      <div class="slide" style="background-image: url('/images/photos/ambalat/SW20171110_0549.jpg');"></div>
+      <div class="slide" style="background-image: url('/images/photos/afp-tattoo/SW20151206_214.jpg');"></div>
+      <div class="slide" style="background-image: url('/images/photos/kendeng/SW20161223_0106.jpg');"></div>
+    </div>
+  </div>
+</section>
+{{ end }}

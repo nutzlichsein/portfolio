@@ -1,0 +1,17 @@
+{{ define "main" }}
+<section class="about-page">
+  <div class="about-container">
+    <!-- Left Column: Photo -->
+    <div class="about-photo">
+      <img src="{{ .Params.photo | default "/images/profilepic.jpg" }}" alt="About Photo">
+    </div>
+
+    <!-- Right Column: Biography Text -->
+    <div class="about-text">
+      {{ .Content }}
+      <div class="spacer"></div>
+      <a href="mailto:suryo@terangtanah.com" class="contact-button">Contact Me</a>
+    </div>
+  </div>
+</section>
+{{ end }}

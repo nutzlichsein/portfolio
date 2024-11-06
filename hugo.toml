@@ -1,0 +1,43 @@
+baseURL = 'https://yourdomain.com/'  # Update this to your actual domain
+languageCode = 'en-us'
+title = 'Suryo Wibowo'
+theme = ''  # Leave this blank for now if you’re building the theme from scratch
+canonifyURLs = true
+
+[menu]
+  [[menu.main]]
+    name = "Reels"
+    url = "/reels/"
+    weight = 1
+
+  [[menu.main]]
+    name = "Photos"
+    url = "/photos/"
+    weight = 2
+
+  [[menu.main]]
+    name = "About"
+    url = "/about/"
+    weight = 3
+
+  # Social media links
+  [[menu.main]]
+    name = "Instagram"
+    url = "https://instagram.com/_suryo_"
+    weight = 4
+    pre = "<i class='fab fa-instagram'></i>"  # Font Awesome icon
+
+  [[menu.main]]
+    name = "YouTube"
+    url = "https://youtube.com/@_suryo_"
+    weight = 5
+    pre = "<i class='fab fa-youtube'></i>"
+
+[params]
+  logo = "/images/logo.png"           # Path to the logo file in your assets
+  logoHeight = "3rem"                # Adjust height as needed
+  logoWidth = "auto"
+  subtitle = "visual storyteller"  # Your tagline or description
+  useTextLogo = false
+  profilePhoto = "images/profil-sw.jpg"
+  keywords = "Suryo Wibowo, Visual Storyteller, Kupang, East Nusa Tenggara, NTT, Indonesia, Portfolio, videography, photography, Videographer, Cinematographer, Photographer, Photo Journalist."
