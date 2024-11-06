@@ -448,7 +448,7 @@ body {
 }
 
 /* Mobile layout adjustments */
-@media (max-width: 768px) {
+@media (max-width: 1080px) {
   /* Stack text above photos */
   .photo-essay-row {
     flex-direction: column;
