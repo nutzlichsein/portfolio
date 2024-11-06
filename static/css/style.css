@@ -455,8 +455,7 @@ body {
   }
 
   /* Set text and gallery to full width */
-  .essay-text-column,
-  .gallery-column {
+  .essay-text-column, {
     width: 100%;
     padding: 5px;
   }
