@@ -448,7 +448,7 @@ body {
 }
 
 /* Mobile layout adjustments */
-@media (max-width: 1080px) {
+@media (max-width: 768px) {
   /* Stack text above photos */
   .photo-essay-row {
     flex-direction: column;
@@ -456,7 +456,7 @@ body {
 
   /* Set text and gallery to full width */
   .essay-text-column, {
-    width: 100%;
+    width: 100vw;
     padding: 5px;
   }
 
