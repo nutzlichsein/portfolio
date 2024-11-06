@@ -1,7 +1,6 @@
 baseURL = 'https://yourdomain.com/'  # Update this to your actual domain
 languageCode = 'en-us'
 title = 'Suryo Wibowo'
-theme = ''  # Leave this blank for now if you’re building the theme from scratch
 canonifyURLs = true
 
 [menu]
