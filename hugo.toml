@@ -1,4 +1,4 @@
-baseURL = 'https://sw-portfolio-hugo.pages.dev/'  # Update this to your actual domain
+baseURL = 'https://suryo.terangtanah.com/'  # Update this to your actual domain
 languageCode = 'en-us'
 title = 'Suryo Wibowo'
 canonifyURLs = true
