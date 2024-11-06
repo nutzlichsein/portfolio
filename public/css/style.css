@@ -36,7 +36,6 @@
     object-fit: contain;
     color: #ddd;
     padding-top: 5px;
-    padding-left: 10px;
   }
 
   .site-logo h1 {
@@ -82,7 +81,7 @@
     text-decoration: none;
     color: #cccccc;
     font-weight: lighter;
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
   
   .site-nav a:hover {
